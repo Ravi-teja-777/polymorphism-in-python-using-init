@@ -1,0 +1,24 @@
+class Car:
+    def __init__(self,c_name,c_color,c_brand):
+        self.c_name = c_name
+        self.c_color = c_color
+        self.c_brand = c_brand
+        
+    def info(self):
+        print(f"Car name : {self.c_name}\nCar color : {self.c_color}\nCar brand : {self.c_brand}")
+
+class Additional(Car):
+    def __init__(self,c_name,c_color,c_brand,c_prize,c_model,c_fuel):
+        super().__init__(c_name,c_color,c_brand)
+        self.c_prize = c_prize
+        self.c_model = c_model
+        self.c_fuel = c_fuel
+        
+    def info(self):
+        print(f"Car name : {self.c_name}\nCar color : {self.c_color}\nCar brand : {self.c_brand}\nCar prize : {self.c_prize}\nCar model : {self.c_model}\nCar fuel type : {self.c_fuel}")
+
+car1= Additional("M5","Blue","BMW",7500000,"2025","Petrol")
+car1.info()
+print()
+car2= Car("M3","Red","Audi")
+car2.info()
